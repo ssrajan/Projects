@@ -1,0 +1,8 @@
+﻿@searchlog = 
+    EXTRACT UserId          int
+    FROM "D:/USQLDataRoot/SearchLog.tsv"
+    USING Extractors.Tsv();
+
+OUTPUT @searchlog 
+    TO "D:/USQLDataRoot/SearchLog_output.tsv"
+    USING Outputters.Tsv();
